@@ -8,6 +8,14 @@ be compiled as part of a library and so create the include / library
 infrastructure. The src and include directories are populated by
 scripts from the SymbolicC++ header files.
 
+The library can be configured for building via GNU autoconf or
+via cmake (http://www.cmake.org). See the section named
+"Installation using cmake" for instructions to build using cmake.
+The cmake method can be used to build project files for Microsoft Visual C++.
+
+The following sections explain how to use the GNU autoconf
+method to build the library.
+
 == Installation to /usr/local ===============================================
 
 To install to /usr/local:
@@ -59,6 +67,32 @@ for example by modifying /etc/ld.so.conf or by setting the LD_LIBRARY_PATH
   $ export LD_LIBRARY_PATH
   $ ./program 
   ...
+
+A brief PDF document describing SymbolicC++ is provided (doc/introsymb.pdf)
+and is installed as where_to_install/share/doc/SymbolicC++.pdf.
+
+== Installation using cmake =================================================
+
+In Microsoft Windows you can use the cmake GUI to setup the build process,
+and generate projects and solutions for many versions of Visual Studio/C++.
+
+This section describes the command line method.
+
+In the extracted directory type
+
+  cmake .
+
+or, if you prefer to build a static library
+
+  cmake -D STATICLIB=YES .
+
+To set the installation directory to somewhere other than the default
+
+  cmake -D CMAKE_INSTALL_PREFIX=where_to_install
+
+or for the static library
+
+  cmake -D STATICLIB=YES CMAKE_INSTALL_PREFIX=where_to_install
 
 A brief PDF document describing SymbolicC++ is provided (doc/introsymb.pdf)
 and is installed as where_to_install/share/doc/SymbolicC++.pdf.

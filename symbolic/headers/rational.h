@@ -56,6 +56,7 @@ class Rational
       Rational(T);
       Rational(T,T);
       Rational(const Rational<T>&);
+      Rational(const char*);
       Rational(const string&);
       Rational(const double&);
       ~Rational();
@@ -124,6 +125,9 @@ template <class T> Rational<T>::Rational (T N, T D) : p(N),q(D)
 
 template <class T> Rational<T>::Rational(const Rational<T> &r) 
    : p(r.p), q(r.q) {}
+
+template <class T> Rational<T>::Rational(const char *s)
+{ *this = Rational<T>(string(s)); }
 
 // for a string "a" or "a/b" or "a.b"
 // spaces are allowed for "a / b"

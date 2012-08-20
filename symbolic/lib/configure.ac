@@ -1,4 +1,4 @@
-AC_INIT([symbolicc++],[3:35],[yhardy@uj.ac.za])
+AC_INIT([symbolicc++],[3:@VERSION@],[hardyy@unisa.ac.za])
 AM_INIT_AUTOMAKE
 
 AC_CONFIG_MACRO_DIR([m4])

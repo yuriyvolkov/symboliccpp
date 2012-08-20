@@ -1,3 +1,7 @@
+2010-10-26
+	Add support for building the library version using cmake
+	Removed the Visual C++ project files: use cmake to generate them
+
 2010-09-15
 	Fixed rational.h to include <limits>
 

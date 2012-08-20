@@ -136,9 +136,9 @@ Multinomial<T> Multinomial<T>::operator-() const
 {
  Multinomial<T> p2(*this);
  typename list<pair<T,int> >::iterator i = p2.u.begin();
- typename list<pair<T,int> >::iterator j = p2.m.begin();
+ typename list<pair<Multinomial<T>,int> >::iterator j = p2.m.begin();
  for(;i!= p2.u.end();i++) i->first = -(i->first);
- for(;j!= p2.v.end();j++) j->first = -(j->first);
+ for(;j!= p2.m.end();j++) j->first = -(j->first);
  return p2;
 }
 

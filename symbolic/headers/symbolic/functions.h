@@ -765,7 +765,11 @@ Derivative::Derivative(const Symbolic &s1,const Symbolic &s2)
 
 Symbolic Derivative::subst(const Symbolic &x,const Symbolic &y,int &n) const
 {
- if(*this == x) return y;
+ if(*this == x)
+ {
+  ++n;
+  return y;
+ }
 
  list<Symbolic>::const_iterator i;
  list<Symbolic>::iterator j;
@@ -817,6 +821,8 @@ Symbolic Derivative::df(const Symbolic &s) const
 {
  list<Symbolic>::const_iterator i;
 
+ if(*this == s) return 1;
+ 
  if(parameters.front().type() == typeid(Symbol))
  {
   Symbolic result;
