@@ -1,0 +1,6 @@
+To use SymbolicC++ add the headers directory to the C++ compiler's
+include file search path.
+
+If you are using GCC and SymbolicC++ programs crash with a segmentation
+fault, it may be necessary to use -fno-elide-constructors (experienced
+on x86_64).
