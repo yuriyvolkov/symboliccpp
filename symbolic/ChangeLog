@@ -1,3 +1,11 @@
+2012-05-03
+	Add the constructor Rational(const char*)
+	Problem reported by W.-H. Steeb
+
+2012-01-26
+	Fix type error for iterators in multinomial.h
+	Reported by Peter H. Hodges
+
 2010-10-26
 	Add support for building the library version using cmake
 	Removed the Visual C++ project files: use cmake to generate them
